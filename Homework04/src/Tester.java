@@ -71,8 +71,6 @@ public class Tester {
 		out.close();
 
 	} // End create trees data method
-	
-	
 
 	// Method to insert a specified size of input data
 	// into the RedBlack BST. Repeats the process 1000 times.

@@ -23,7 +23,10 @@ public class Tester {
 		System.out.println("Length: " + Arrays.toString(length));
 		
 		
-		// Write to File for height and rotations
+		// Write to File for average height and average rotations
+        // and average length
+        // The file for all the lenghts in printed inside the create
+        // trees method
 		FileWriter out = new FileWriter("output.txt"); 
 		out.write(Arrays.toString(height));
 		out.write("\r\n");
@@ -60,6 +63,7 @@ public class Tester {
 			}
 			
 			// Write data from all iterations of one size into lenghts
+            // This is what writes the data for calculating the standard deviation
 			out.write(Arrays.toString(lengthForOneSize));
 			out.write("\r\n");
 			

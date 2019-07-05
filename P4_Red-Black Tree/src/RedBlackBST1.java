@@ -1,5 +1,7 @@
 /******************************************************************************
- *  Compilation:  javac RedBlackBST.java
+ *  Edited by : Nishil Shah, VIkramaditya Pandey for CSE 564
+ *
+ *  Compilation:  javac RedBlackBST1.java
  *  Execution:    java RedBlackBST < input.txt
  *  Dependencies: StdIn.java StdOut.java  
  *  Data files:   https://algs4.cs.princeton.edu/33balanced/tinyST.txt  

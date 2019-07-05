@@ -1,0 +1,31 @@
+# R Script 2 to process the standard deviation of lenghts
+library(magrittr)
+library(ggplot2)
+
+# Process Data 
+strvec <- readLines(con = "lengths.txt", n = -1)  
+strlist <- strsplit(strvec,"abc")
+
+for(i in 1:10000){
+  strlist[[i]] <- strsplit(strlist[[i]], ", ")
+}
+
+for(i in 1:10000){
+  strlist[[i]][[1]] <- strlist[[i]][[1]] %>% as.numeric()
+}
+
+strdev <- strlist
+for(i in 1:10000){
+  strdev[[i]] <- sd(strlist[[i]][[1]])
+}
+
+# Split to add to data frame
+matr <- as.matrix(strdev) %>% unlist() %>% as.data.frame()
+
+# Create standard deviation vector
+names(matr) <- "sd"
+
+matr$F1 <- 1:nrow(matr)
+
+# Export to plot in Tableau
+WriteXLS::WriteXLS(x = matr, ExcelFileName ="lenghtsd.xls")
